@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="style.css">
     <title>Data Sci Project</title>
 
-    <style>
-        #FirstSection>p {
-            float: left;
-        }
-    </style>
-
 </head>
 
 <body>
-    <div><iframe id="frame" src="data.html" style="align-content: center; width: 70%; height: 700px"></iframe></div>
 
+    <div id="data">
+        <iframe id="frame" src="data.html" style="align-content: center; width: 70%; height: 600px"></iframe>
 
+        <div id="bottom-container">
 
-    <div class="flex-container">
+            <div id="left-col">
+                <img src="../figs/fig1.png" alt="">
+                <img src="../figs/fig2.png" alt="">
+                <img src="../figs/fig4.png" alt="">
+            </div>
+
+            <div id="right-col">
+                <img src="../figs/fig1-2.png" alt="">
+                <img src="../figs/fig3.png" alt="">
+                <img src="../figs/fig5.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE OF PROJECT -->
+    
+    <div id="right-container">
 
         <div>
             <h3><strong>The New York Police Department has open sourced their data on vehicle collisions that happen
@@ -34,13 +47,15 @@
                 study the trend of collisions that happen in NY so that the general public can be
                 made more aware in order to stay safe, and also so that it may become possible that a means of
                 prevention can be
-                created to make our streets safer for the public.</p>
+                created to make our streets safer for the public.
+            </p>
         </div>
 
         <div>
-            <h4>This data set can be found <a
-                    href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions-Crashes/h9gi-nx95">here</a>
+            <h4>This data set can be found <em><a
+                    href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions-Crashes/h9gi-nx95">here</a></em>
                 at NYCOpenData's website</h4>
+
         </div>
 
         <hr>
@@ -49,7 +64,9 @@
             The data is filtered from January 1<sup>st</sup> 2019, to Current date<sup>st</sup> 2019. (Will be updated)
         </p>
 
-        <p>We use the describe function in order to check whether or not </p>
+        <p>We use the describe function in order to check whether we have missing data. These values usually show up as
+            NaN for not availiable. We see that there is some NaN values that show up for some data. This could be
+            because it was not recorded either accidentaly or on purpose. Or the case that </p>
         <p>
             <em>PERSONS</em> refers to those that were directly involved in the collisions, the drivers and/or
             passengers. <br><br>
@@ -58,18 +75,37 @@
 
         </p>
 
+        <div id="outlier">
+            <h2>Outliers</h2>
+            <p>An outlier is defined as an observation that lies an abnormal distance from other values in a random
+                sample from a population. The keyword here is abnormal. If we take a look over at the <em>"Separated by
+                    Zip Code</em> graph, we see that there are plotted values that look like they're outliers. </p>
+
+            <p>However, those points are actually supposed to be included because they represent necessary data for our
+                models. Each point is repsenting a mark where there have been most reported cases within certain zip
+                codes.</p>
+
+            <p>This data does not contain outliers, however it is important to note that zip codes contain many streets
+                within them that intertwine between boroughs, so it would be difficult to make the theory that the
+                amount of injury or deaths correspond to </p>
+        </div>
+
+        <div id="missing_data">
+            <h1>Missing Data</h1>
+            <p>There is missing data in this data set. IF we look at the data head, we see a bunch of NaNs values.</p>
+            <p>
+                It's important to note that we should not remove these attributes from this dataframe because it is an
+                essential part that describes the data. There are definitely instances where data could and should have
+                been recorded, but the majority of the NaN values are from an abscence of <em>Contributing Factors</em>.
+                There are cases where vehicles collided but not more than just two at a time, so these fields are left
+                blank for these rows.
+            </p>
+            
+        </div>
+
+
+
     </div>
-
-    <div>
-        <h2>Outliers</h2>
-        <p>An outlier is defined as an observation that lies an abnormal distance from other values in a random
-            sample from a population. The keyword here is abnormal. If we take a look over at the <em>by Months</em>
-            and <em>by Zip Code</em> graphs, we see that there are plotted values that look like they're</p>
-    </div>
-
-
-
-
 
 
     <script src="script.js"></script>

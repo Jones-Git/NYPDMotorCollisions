@@ -1,22 +1,50 @@
-.flex-container {
-    display: flex;
-    flex-direction: column;
-
-}
-
 div>iframe {
+    display: flex;
     float: left;
-    margin-right: 20px;
-    border: 5px solid rgb(41, 69, 224);
+    margin: 0 20px 10px 0;
+    border: 5px solid;
 }
 
 a {
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 hr {
     display: block;
-    border: 1px solid black;
-    width: 96%;
+    border: 2px solid black;
+    width: 98%;
     height: 2px;
 }
+
+body {
+    background-color: rgb(247, 247, 247);
+}
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+    float: inline-start;
+    /* Should keep everything on the right side of the page */
+}
+
+#bottom-container {
+    display: flex;
+    float: left;
+    /* Moves everything nicely under the iframe */
+
+}
+
+#left-col {
+    margin: 0 100px 0 40px;
+    display: inline-flex;
+    flex-direction: column;
+    /* float: inline-start; */
+}
+
+#right-col {
+    margin: 0 0px 0 0;
+    display: inline-flex;
+    flex-direction: column;
+    /* float: inline-start; */
+}
+
