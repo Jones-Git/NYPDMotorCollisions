@@ -19,41 +19,40 @@
 
             <div id="left-col">
                 <img src="../figs/fig1.png" alt="">
-                <img src="../figs/fig2.png" alt="">
-                <img src="../figs/fig4.png" alt="">
+                <img src="../figs/fig1-2.png" alt="">
+                <img src="../figs/fig2-1.png" alt="">
             </div>
 
             <div id="right-col">
-                <img src="../figs/fig1-2.png" alt="">
-                <img src="../figs/fig3.png" alt="">
-                <img src="../figs/fig5.png" alt="">
+                <img src="../figs/fig1-1.png" alt="">
+                <img src="../figs/fig2.png" alt="">
+                <!-- <img src="../figs/fig3.png" alt=""> -->
             </div>
 
         </div>
     </div>
 
     <!-- RIGHT SIDE OF PROJECT -->
-    
+
     <div id="right-container">
 
         <div>
             <h3><strong>The New York Police Department has open sourced their data on vehicle collisions that happen
-                    throughout
-                    the state.</strong></h3>
+                    throughout the state.</strong></h3>
         </div>
 
         <div>
             <p>The reason I am intrested in this data is because of how useful it is to New York. It is important to
                 study the trend of collisions that happen in NY so that the general public can be
                 made more aware in order to stay safe, and also so that it may become possible that a means of
-                prevention can be
-                created to make our streets safer for the public.
+                prevention can be created to make our streets safer for the public.
             </p>
         </div>
 
         <div>
             <h4>This data set can be found <em><a
-                    href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions-Crashes/h9gi-nx95">here</a></em>
+                        href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions-Crashes/h9gi-nx95"
+                        style="text-decoration: underline;">here</a></em>
                 at NYCOpenData's website</h4>
 
         </div>
@@ -61,22 +60,22 @@
         <hr>
 
         <p>
-            The data is filtered from January 1<sup>st</sup> 2019, to Current date<sup>st</sup> 2019. (Will be updated)
+            The data is filtered from January 1<sup>st</sup> 2019, to November 31<sup>st</sup> 2019.
         </p>
 
         <p>We use the describe function in order to check whether we have missing data. These values usually show up as
             NaN for not availiable. We see that there is some NaN values that show up for some data. This could be
             because it was not recorded either accidentaly or on purpose. Or the case that </p>
         <p>
-            <em>PERSONS</em> refers to those that were directly involved in the collisions, the drivers and/or
-            passengers. <br><br>
-            <em>PEDESTRIANS</em> refers to those that were involved in the collisions, someone who is outside of the
-            vehicle during time of collision.
+            <em>PERSONS</em> refers to those that were involved in the collisions from all parties, so drivers, cyclist,
+            and pedestrians combined. <br><br>
+            <!-- <em>PEDESTRIANS</em> refers to those that were involved in the collisions, someone who is outside of the
+            vehicle during time of collision. -->
 
         </p>
 
         <div id="outlier">
-            <h2>Outliers</h2>
+            <h1>Outliers</h1>
             <p>An outlier is defined as an observation that lies an abnormal distance from other values in a random
                 sample from a population. The keyword here is abnormal. If we take a look over at the <em>"Separated by
                     Zip Code</em> graph, we see that there are plotted values that look like they're outliers. </p>
@@ -96,13 +95,25 @@
             <p>
                 It's important to note that we should not remove these attributes from this dataframe because it is an
                 essential part that describes the data. There are definitely instances where data could and should have
-                been recorded, but the majority of the NaN values are from an abscence of <em>Contributing Factors</em>.
+                been recorded - such as in the BOROUGH column - but the majority of the NaN values are from an abscence
+                of <em>Contributing Factors</em>.
                 There are cases where vehicles collided but not more than just two at a time, so these fields are left
                 blank for these rows.
             </p>
-            
+
         </div>
 
+        <div id="logit">
+            <h1>Linear Regression</h1>
+            <p>I now want to determine whether I can make a linear regression model with my dataset. Doing so, I find
+                that perhaps I am not using the proper variables to construct this, as my R-squared is far below the
+                margins I require for it to show a relationship if any. Essentially what I am trying to accomplish here
+                is an attempt to convey how the amount of people injured compares to</p>
+        </div>
+
+        <div id="trees">
+            <h1>Decision Trees</h1>
+        </div>
 
 
     </div>
